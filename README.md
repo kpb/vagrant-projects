@@ -1,6 +1,6 @@
 ## Vagrant Projects
 
-A collection of vagrant project to automatically provision development environments.
+A collection of vagrant projects to automatically provision development environments.
 
 ### Prerequisites
 
