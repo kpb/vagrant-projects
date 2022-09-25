@@ -1,4 +1,4 @@
-## Vagrant Projects
+## Vagrant Project
 
 A collection of vagrant projects to automatically provision development environments.
 
@@ -6,6 +6,10 @@ A collection of vagrant projects to automatically provision development environm
 
 - [Oracle Virtual Box][virtual-box]
 - [Vagrant][vagrant]
+
+Additionally, most of the projects use vagrant plugins which can be installed via `vagrant plugin install ...`
+
+- [vagrant-vbguest][vagrant-vbguest]
 
 ### Getting Started
 
@@ -20,3 +24,4 @@ The first time you `vagrant up` a box, it may take a while, depending on your in
 <!-- ref links -->
 [virtual-box]://www.virtualbox.org/wiki/Downloads "Oracle Virtual Box"
 [vagrant]: https://www.vagrantup.com "Vagrant"
+[vagrant-vbguest]: https://github.com/dotless-de/vagrant-vbguest "vbguest plugin"
