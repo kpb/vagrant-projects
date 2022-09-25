@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 #
-# Java development box. Includes favorite dev tools: SDKMAN, KinD, Kubectl, Helm, Kustomize, Spring Boot CLI, Mob, Git, etc.
+# Java development box. Includes favorite dev tools: SDKMAN, KinD, Kubectl, Spring Boot CLI, Mob, Git, etc.
 Vagrant.configure("2") do |config|
 
   config.vm.box = "ubuntu/jammy64"
