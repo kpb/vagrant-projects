@@ -1,6 +1,6 @@
 ## Java Dev Box
 
-A Java development box based on [jammy-box][ubuntu/jammy]. Installs and configures a bunch of dev tools including: _KinD, kubectl, mob.sh, SDKMAN, Git, etc._
+A Java development box based on [ubuntu/jammy64][jammy-box]. Installs and configures a bunch of dev tools including: _KinD, kubectl, mob.sh, SDKMAN, Git, etc._
 
 ### Running
 
