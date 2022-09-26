@@ -25,3 +25,6 @@ The first time you `vagrant up` a box, it may take a while, depending on your in
 [virtual-box]://www.virtualbox.org/wiki/Downloads "Oracle Virtual Box"
 [vagrant]: https://www.vagrantup.com "Vagrant"
 [vagrant-vbguest]: https://github.com/dotless-de/vagrant-vbguest "vbguest plugin"
+
+_Supported with love by [me](mailto:hello@kennethbowen.com "hello at kennethbowen dot com")!_ Leave questions, comments,
+or suggestions as Github issues or email.
