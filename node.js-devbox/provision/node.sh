@@ -12,3 +12,6 @@ source $NVM_DIR/nvm.sh
 
 nvm install ${node_js_version}
 nvm use ${node_js_version}
+
+# use the latest suppported npm version on the current node version
+nvm install-latest-npm
