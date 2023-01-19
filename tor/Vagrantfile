@@ -1,0 +1,35 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "debian/bullseye64"
+
+  #vbguest plugin config
+  if Vagrant.has_plugin?("vagrant-vbguest")
+    # set to false to disable vbguest from updating guest additions
+    config.vbguest.auto_update = true
+  end
+
+  # Virtualbox settings
+  # 6 gigs ram. Don't use more than 60% of the host's cpu. Yes please GUI.
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "tor-box"
+    vb.memory = "6114"
+    vb.customize ["modifyvm", :id, "--cpuexecutioncap", "60"]
+    vb.customize ["modifyvm", :id, "--vram", "64"]
+    vb.gui = true
+  end
+
+  # Create a basic LXDE Debian box
+  $script = <<-SCRIPT
+apt-get install -y aptitude
+aptitude install -y lxde-core apt-transport-https curl
+echo "vagrant:vagrant" | sudo chpasswd
+SCRIPT
+
+  config.vm.provision "shell", inline: $script
+  config.vm.provision "tor", type: "shell", path: "provision/tor.sh", privileged: false
+  # reboot after installing desktop environment
+  config.vm.provision "shell", reboot: true
+
+end
