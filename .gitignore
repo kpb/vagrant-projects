@@ -1,4 +1,4 @@
 .vagrant
 # Ignore files in a 'download' dir
-download/**
+download
 !download/.keep
