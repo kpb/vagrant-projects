@@ -2,3 +2,5 @@
 # Ignore files in a 'download' dir
 download
 !download/.keep
+versions.sh
+
