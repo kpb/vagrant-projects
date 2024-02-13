@@ -2,6 +2,7 @@
 # vi: set ft=ruby :
 #
 # Java development box. Includes favorite dev tools: SDKMAN, KinD, Kubectl, Spring Boot CLI, Mob, Git, etc.
+
 Vagrant.configure("2") do |config|
 
   config.vm.box = "ubuntu/jammy64"
@@ -16,12 +17,15 @@ Vagrant.configure("2") do |config|
   end
 
   # Virtualbox settings
-  # 6 gigs ram. Don't use more than 50% of the host's cpu
+  # 8 gigs ram. Don't use more than 50% of the host's cpu
   config.vm.provider "virtualbox" do |vb|
     vb.name = "java-devbox"
-    vb.memory = "6114"
+    vb.memory = "8192"
     vb.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
   end
+
+  # check for the versions file
+  config.vm.provision "versions-check", type: "shell", path: "provision/versions-check.sh", privileged: false
 
   # install docker
   config.vm.provision "docker" do |docker|
